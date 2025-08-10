@@ -33,7 +33,7 @@ public class OrderController {
 	
 	@PostMapping("/")
 	public ResponseEntity<Order> createOrder(@RequestBody Address shippingAddress,
-			@RequestHeader("Authentication") String jwt) throws UserException{
+			@RequestHeader("Authorization") String jwt) throws UserException{
 		User user=userService.findUserProfileByjwt(jwt);
 		Order order=orderService.createOrder(user, shippingAddress);
 		
@@ -50,7 +50,7 @@ public class OrderController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Order> findOrderById(
 			@PathVariable("id") Long orderId,
-			@RequestHeader("Authentication") String jwt) throws OrderException, UserException{
+			@RequestHeader("Authorization") String jwt) throws OrderException, UserException{
 		User user=userService.findUserProfileByjwt(jwt);
 		Order order=orderService.findOrderById(orderId);
 		return ResponseEntity.ok(order);

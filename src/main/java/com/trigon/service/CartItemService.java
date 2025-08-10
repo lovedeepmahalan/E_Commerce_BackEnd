@@ -5,12 +5,13 @@ import com.trigon.entity.CartItem;
 import com.trigon.entity.Product;
 import com.trigon.exception.CartItemException;
 import com.trigon.exception.UserException;
+import com.trigon.request.UpdateCartItemRequest;
 
 public interface CartItemService {
 
 	public CartItem createCartItem(CartItem cartItem);
 	
-	public CartItem updateCartItem(Long userId , Long id , CartItem cartItem) throws UserException,CartItemException;
+	public CartItem updateCartItem(Long userId , Long id , Integer quantity) throws UserException,CartItemException;
 
 	public CartItem isCartItemExist(Cart cart,Product product,String size,Long userId);
 	

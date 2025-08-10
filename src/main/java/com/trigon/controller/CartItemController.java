@@ -14,6 +14,7 @@ import com.trigon.entity.CartItem;
 import com.trigon.entity.User;
 import com.trigon.exception.CartItemException;
 import com.trigon.exception.UserException;
+import com.trigon.request.UpdateCartItemRequest;
 import com.trigon.service.CartItemService;
 import com.trigon.service.UserService;
 
@@ -31,21 +32,22 @@ public class CartItemController {
 	UserService userService;
 
     @DeleteMapping("/{cartItemId}")
-    public ResponseEntity<ApiResponse> deleteCartItem(@PathVariable Long cartIemId,
+    public ResponseEntity<ApiResponse> deleteCartItem(@PathVariable Long cartItemId,
     		@RequestHeader("Authorization")String jwt)throws UserException,CartItemException{
     	User user=userService.findUserProfileByjwt(jwt);
-    	cartItemService.removeCartItem(user.getId(), cartIemId);
+    	System.out.println("Id for the item which i have to delete is :: "+cartItemId);
+    	cartItemService.removeCartItem(user.getId(), cartItemId);
     	ApiResponse res=new ApiResponse("Item Deleted from cart",true);
     	return ResponseEntity.ok(res);
     }
 	
-    @PutMapping("/{cartItemId}")
+    @PutMapping("/{cartItemId}/{quantity}")
     public ResponseEntity<CartItem> upadateCartItem(
-    		@RequestBody CartItem cartItem,
+    		@PathVariable Integer quantity,
     		@PathVariable Long cartItemId,
     		@RequestHeader("Authorization")String jwt) throws UserException,CartItemException{
     		User user=userService.findUserProfileByjwt(jwt);
-    		CartItem updatedCartItem=cartItemService.updateCartItem(user.getId(), cartItemId, cartItem);
+    		CartItem updatedCartItem=cartItemService.updateCartItem(user.getId(), cartItemId, quantity);
     		return ResponseEntity.ok(updatedCartItem);
     	}
     

@@ -34,7 +34,7 @@ public class CartController {
 	
 		User user=userService.findUserProfileByjwt(jwt);
 		Cart cart=cartService.findUserCart(user.getId());
-		
+		System.out.println("cartis ::"+ cart);
 		return ResponseEntity.ok(cart);
 	}
 	
@@ -42,11 +42,9 @@ public class CartController {
 	public ResponseEntity<ApiResponse> addItemToCart(@RequestBody AddItemRequest req,
 			@RequestHeader("Authorization") String jwt) throws UserException, ProductException{
 	
-		System.out.println("Input request is :: "+req);
 		User user=userService.findUserProfileByjwt(jwt);
 		cartService.addCartItem(user.getId(), req);
 		ApiResponse response=new ApiResponse("item added to cart",true);
-		System.out.println("response for daata is :: "+response);
 		return new ResponseEntity<ApiResponse>(response,HttpStatus.OK);
 	}	
 }

@@ -151,12 +151,7 @@ public class User {
 		this.review = review;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", FirstName=" + FirstName + ", LastName=" + LastName + ", Email=" + email
-				+ ", password=" + password + ", role=" + role + ", phone=" + phone + ", address=" + address
-				+ ", paymentinfo=" + paymentinfo + ", rating=" + rating + ", review=" + review + "]";
-	}
+	
 
 	public String getPassword() {
 		return password;
