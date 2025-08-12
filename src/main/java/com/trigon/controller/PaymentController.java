@@ -83,7 +83,7 @@ public class PaymentController {
 			PaymentLinkResponse response=new PaymentLinkResponse();
 			response.setPayment_Link_Id(paymentLinkId);
 			response.setPayment_Link_Url(paymentLinkUrl);
-			
+			System.out.println("Responsse is :: "+response);
 			return new ResponseEntity<PaymentLinkResponse>(response,HttpStatus.CREATED);
 		}catch(Exception e) {
 			throw new RazorpayException("Error creating payment link", e);
