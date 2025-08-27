@@ -20,7 +20,7 @@ public class CreateProductRequest {
 	private String description;
 	private int discountedPrice;
 	private int price;
-	private int discountPersent;
+	private int discountPercent;
 	private int quantity;
 	private String brand;
 	private String color;
@@ -33,7 +33,7 @@ public class CreateProductRequest {
 	@Override
 	public String toString() {
 		return "CreateProductRequest [title=" + title + ", description=" + description + ", discountPrice="
-				+ discountedPrice + ", price=" + price + ", discountPercent=" + discountPersent + ", quantity=" + quantity
+				+ discountedPrice + ", price=" + price + ", discountPercent=" + discountPercent + ", quantity=" + quantity
 				+ ", brand=" + brand + ", color=" + color + ", imgURL=" + imageUrl+ ", size=" + size
 				+ ", topLavelCategory=" + topLavelCategory + ", secondLavelCategory=" + secondLavelCategory
 				+ ", thirdLavelCategory=" + thirdLavelCategory + "]";

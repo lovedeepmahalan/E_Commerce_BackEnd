@@ -16,6 +16,8 @@ import com.trigon.entity.Product;
 import com.trigon.exception.ProductException;
 import com.trigon.request.CreateProductRequest;
 import com.trigon.service.ProductService;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -35,7 +37,7 @@ public class AdminProductController {
 		return ResponseEntity.ok(product);
 	}
 	
-	@PostMapping("/{productId}/delete")
+	@DeleteMapping("/{productId}/delete")
 	public ResponseEntity<ApiResponse> deleteProduct(@PathVariable Long productId) throws ProductException{
 		productService.deleteProduct(productId);
 		ApiResponse response=new ApiResponse();

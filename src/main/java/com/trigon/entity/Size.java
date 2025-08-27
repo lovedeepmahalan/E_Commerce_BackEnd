@@ -25,10 +25,7 @@ public class Size {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	@Override
-	public String toString() {
-		return "Size [name=" + name + ", quantity=" + quantity + "]";
-	}
+	
 	
 	
 }

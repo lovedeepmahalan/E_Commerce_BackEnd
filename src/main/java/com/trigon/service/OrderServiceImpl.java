@@ -92,6 +92,7 @@ public class OrderServiceImpl implements OrderService{
 		createdOrder.setCreatedAt(LocalDateTime.now());
 		
 		Order savedOrder=orderRepo.save(createdOrder);
+		System.out.println("Order that i have saved is :: "+savedOrder);
 		
 		for(OrderItem item:orderItems) {
 			item.setOrder(savedOrder);

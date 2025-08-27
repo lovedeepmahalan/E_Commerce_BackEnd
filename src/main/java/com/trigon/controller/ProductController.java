@@ -37,9 +37,7 @@ public class ProductController {
 	        @RequestParam(required = false) Integer pageNumber,
 	        @RequestParam(required = false) Integer pageSize
 	){
-		
-		System.out.println("size is  :: "+size);
-		
+				
 		if ("null".equalsIgnoreCase(category) || "undefined".equalsIgnoreCase(category)) {
 	        category = "";
 	    }

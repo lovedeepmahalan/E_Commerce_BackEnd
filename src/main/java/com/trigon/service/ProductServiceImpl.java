@@ -74,7 +74,7 @@ public class ProductServiceImpl implements ProductService{
 	    product.setColor(req.getColor());
 	    product.setCreatedAt(LocalDateTime.now());
 	    product.setDescription(req.getDescription());
-	    product.setDiscountPersent(req.getDiscountPersent());
+	    product.setDiscountPersent(req.getDiscountPercent());
 	    product.setDiscountedPrice(req.getDiscountedPrice());
 	    product.setImageUrl(req.getImageUrl());
 	    product.setPrice(req.getPrice());
@@ -89,6 +89,7 @@ public class ProductServiceImpl implements ProductService{
 	public String deleteProduct(Long id) throws ProductException {
 		Product product=getProductById(id);
 		product.getSize().clear();
+		System.out.println("Product that i have to delete is :: "+product);
 		productRepo.delete(product);
 		return "Product has been deleted successfully";
 	}

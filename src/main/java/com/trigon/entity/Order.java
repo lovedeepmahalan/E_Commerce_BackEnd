@@ -18,6 +18,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Table(name="`order`")
@@ -29,7 +30,7 @@ public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@Column(name="order_id")
 	private String orderId;
 	
@@ -37,7 +38,7 @@ public class Order {
 	@JoinColumn(name = "user_id")
 	private User user;
 
-	
+	@ToString.Exclude
 	@OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
 	private List<OrderItem> orderItem=new ArrayList();
 	

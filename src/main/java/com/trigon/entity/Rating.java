@@ -69,11 +69,6 @@ public class Rating {
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
-	@Override
-	public String toString() {
-		return "Rating [id=" + id + ", user=" + user + ", product=" + product + ", rating=" + rating + ", createdAt="
-				+ createdAt + "]";
-	}
 	
 	
 }

@@ -44,11 +44,7 @@ public class paymentInformation {
 	public void setCvv(String cvv) {
 		this.cvv = cvv;
 	}
-	@Override
-	public String toString() {
-		return "paymentInformation [cardHolderName=" + cardHolderName + ", cardNumber=" + cardNumber
-				+ ", expirationDate=" + expirationDate + ", cvv=" + cvv + "]";
-	}
+	
 	
 	
 }

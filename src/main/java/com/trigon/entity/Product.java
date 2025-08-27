@@ -22,6 +22,7 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -66,15 +67,5 @@ public class Product {
 	
 	private LocalDateTime createdAt;
 
-	
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", title=" + title + ", description=" + description + ", price=" + price
-				+ ", discountPrice=" + discountedPrice + ", discountPercent=" + discountPersent + ", quantity=" + quantity
-				+ ", brand=" + brand + ", color=" + color + ", size=" + size + ", imgUrl=" + imageUrl + ", rating="
-				+ rating + ", review=" + review + ", numRating=" + numRating + ", category=" + category + ", createdAt="
-				+ createdAt + "]";
-	}
-	
 	
 }

@@ -8,7 +8,6 @@ import lombok.ToString;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class PaymentLinkResponse {
 
 	private String Payment_Link_Id;
