@@ -1,8 +1,7 @@
 package com.trigon.request;
 
-import java.util.HashSet;
-import java.util.Set;
-
+import java.util.ArrayList;
+import java.util.List;
 import com.trigon.entity.Size;
 
 import lombok.AllArgsConstructor;
@@ -14,8 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CreateProductRequest {
 
-	
-	
 	private String title;
 	private String description;
 	private int discountedPrice;
@@ -25,16 +22,16 @@ public class CreateProductRequest {
 	private String brand;
 	private String color;
 	private String imageUrl;
-	private Set<Size> size=new HashSet<Size>();
+	private List<Size> size=new ArrayList<Size>();
 	private String topLavelCategory;
 	private String secondLavelCategory;
 	private String thirdLavelCategory;
 	
 	@Override
 	public String toString() {
-		return "CreateProductRequest [title=" + title + ", description=" + description + ", discountPrice="
+		return "CreateProductRequest [title=" + title + ", description=" + description + ", discountedPrice="
 				+ discountedPrice + ", price=" + price + ", discountPercent=" + discountPercent + ", quantity=" + quantity
-				+ ", brand=" + brand + ", color=" + color + ", imgURL=" + imageUrl+ ", size=" + size
+				+ ", brand=" + brand + ", color=" + color + ", imageURL=" + imageUrl+ ", size=" + size
 				+ ", topLavelCategory=" + topLavelCategory + ", secondLavelCategory=" + secondLavelCategory
 				+ ", thirdLavelCategory=" + thirdLavelCategory + "]";
 	}

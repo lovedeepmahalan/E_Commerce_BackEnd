@@ -47,7 +47,7 @@ public class Product {
 	@Embedded
 	@ElementCollection
 	@Column(name="sizes")
-	private Set<Size> size=new HashSet();
+	private List<Size> size=new ArrayList<Size>();
 	
 	@Column(name="img_url")
 	private String imageUrl;
