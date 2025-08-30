@@ -27,14 +27,14 @@ public class CreateProductRequest {
 	private String secondLavelCategory;
 	private String thirdLavelCategory;
 	
-	@Override
-	public String toString() {
-		return "CreateProductRequest [title=" + title + ", description=" + description + ", discountedPrice="
-				+ discountedPrice + ", price=" + price + ", discountPercent=" + discountPercent + ", quantity=" + quantity
-				+ ", brand=" + brand + ", color=" + color + ", imageURL=" + imageUrl+ ", size=" + size
-				+ ", topLavelCategory=" + topLavelCategory + ", secondLavelCategory=" + secondLavelCategory
-				+ ", thirdLavelCategory=" + thirdLavelCategory + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "CreateProductRequest [title=" + title + ", description=" + description + ", discountedPrice="
+//				+ discountedPrice + ", price=" + price + ", discountPercent=" + discountPercent + ", quantity=" + quantity
+//				+ ", brand=" + brand + ", color=" + color + ", imageURL=" + imageUrl+ ", size=" + size
+//				+ ", topLavelCategory=" + topLavelCategory + ", secondLavelCategory=" + secondLavelCategory
+//				+ ", thirdLavelCategory=" + thirdLavelCategory + "]";
+//	}
 	
 	
 }
