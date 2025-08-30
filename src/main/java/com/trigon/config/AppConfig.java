@@ -35,7 +35,7 @@ public class AppConfig {
                 public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                     CorsConfiguration cfg = new CorsConfiguration();
                     cfg.setAllowedOrigins(Arrays.asList("http://localhost:3000",
-                    		"http://cartzy-smoky.vercel.app/"));
+                    		"https://cartzy-smoky.vercel.app/"));
                     cfg.setAllowedMethods(Collections.singletonList("*"));
                     cfg.setAllowCredentials(true);
                     cfg.setAllowedHeaders(Collections.singletonList("*"));
